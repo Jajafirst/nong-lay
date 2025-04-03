@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>สารคดีน้องเลย์</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Prompt:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1>สารคดีน้องเลย์</h1>
+    <p>สิ่งมีชีวิตสีเขียว ที่น่ารักมากๆ มากๆ</p>
+    <button onclick="scrollToSection('about')">เริ่มสำรวจ</button>
+  </header>
+
+  <section id="about">
+    <h2>👧 น้องเลย์คือใคร?</h2>
+    <ul>
+      <li>💚 ผู้ที่ชอบชาเขียว & สีเขียว</li>
+      <li>🥭 ชอบมะม่วงจิ้มรสดี</li>
+      <li>😴 นอนได้ทุกเวลา ทักไปก็เงียบ</li>
+      <li>🧃 พูดไปเรื่อย จนคนตามมุกไม่ทัน</li>
+      <li>🌍 คิดว่าเราโยนโทรศัพท์ออกนอกโลก</li>
+      <li>🔗 ผู้ที่ชอบส่ง reels</li>
+      <li>📖 ชอบอ่านนิยาย</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💬 คำพูดที่เจอบ่อย</h2>
+    <h6>คลิกเพื่อแปล</h6>
+    <div class="quote-box" onclick="showMeaning(this, 'เราต้องตามใจน้อง')">“ก็แล้วแต่”</div>
+    <div class="quote-box" onclick="showMeaning(this, 'ไม่รู้จะทำยังไง')">“ทำไรก็ทำ เป็นคนดีก็พอ”</div>
+    <div class="quote-box" onclick="showMeaning(this, 'ไม่เข้าใจ ไม่รู้เรื่อง และไม่เอาเลย')">“ไม่เก้ต ไม่เค ไม่เอ”</div>
+    <div class="quote-box" onclick="showMeaning(this, 'เข้าใจนะ แต่ยังรู้สึกไม่โอเคอยู่ดี')">“เข้าใจแต่ไม่พอใจ”</div>
+    <div class="quote-box" onclick="showMeaning(this, 'แค่นี้เอง')">“นี่ไงหนู ไม่คุ้นหูเลยเหรอ”</div>
+    <div class="quote-box" onclick="showMeaning(this, 'ต้องปิดคอมตอนนั้น')">“เล่นเกมไป”</div>
+    <div class="quote-box" onclick="showMeaning(this, 'โอเคคับ')">“โอเคจบเจ้าไม่เร้าหรือคับน้อนนนๆ”</div>
+  </section>
+
+  <section>
+    <h2>💬 คำถามที่น้องถาม</h2>
+    <h6>คลิกเพื่อแปล</h6>
+    <div class="quote-box" onclick="showMeaning(this, 'เทอเป็นคนที่ -1 เพราะใน list เป็น [0] เท่ากับเทอมาก่อนเป็นคนหน้าสุด [-1] แปลว่าเทอเป็นคนสุดท้าย ที่มาเป็นอันดับที่ 1')">“ให้ใจชั้นเปนคนที่เท่าไหร่นับจาก0”</div>
+    <div class="quote-box" onclick="showMeaning(this, 'NA ทรายบนโลกนี้มีกี่เม็ด ดวงดาวบนจักรวาล มีกี่ดวง คำตอบจะเป็น NA ถึงเเม้ว่ามันจะประมาณการได้ เเต่ก็ไม่ใช่คำตอบจริงๆ เพราะมันเยอะมาก เกินกว่าที่จะนับ')">“รักแค่ไหน”</div>
+  </section>
+
+  <section>
+    <h2>💤 โหมดหลับของน้อง</h2>
+    <p>หากคุณส่งข้อความหาน้องแล้วไม่ได้ตอบ...</p>
+    <p class="sleep">น้องอาจกำลัง recharge พลังความน่ารักอยู่ค่ะ 😴</p>
+    <button onclick="showRandomSleepReason()">ทำไมน้องถึงนอน?</button>
+    <p id="sleep-reason"></p>
+  </section>
+
+  <section class="moments-section">
+    <h2>📸 รวมเหตุการณ์น้องเลย์</h2>
+    <div class="moment-grid">
+      <div class="moment-card" onclick="openEventPopup('./img/book-event.JPG', 'เหตุการณ์เมื่อย', 'วันนี้น้องไปงานหนังสือกับเราแต่น้องเดินเยอะมาก ไม่ให้เราซื้อหนังสือให้ด้วย ดูหนังสือเยอะสุดๆ😅')">
+        <img src="./img/book-event.JPG" alt="">
+        <h3>เหตุการณ์เมื่อย</h3>
+        <p>วันนี้น้องไปงานหนังสือกับเราแต่น้องเดินเยอะมาก ไม่ให้เราซื้อหนังสือให้ด้วย ดูหนังสือเยอะสุดๆ😅</p>
+      </div>
+      <div class="moment-card" onclick="openEventPopup('./img/dino.JPG', 'เหตุการณ์ trex', 'น้องถามเราว่า นี้คือรูปอะไรถ้าตอบหมาแสดงว่ารัก แต่รูปเป็น trex มันเป็น fact ทั้งคู่ เราเลยต้องไปถาม chat เพื่อเอาคำตอบ')">
+        <img src="./img/dino.JPG" alt="">
+        <h3>เหตุการณ์ trex</h3>
+        <p>น้องถามเราว่า นี้คือรูปอะไรถ้าตอบหมาแสดงว่ารัก แต่รูปเป็น trex...</p>
+      </div>
+      <div class="moment-card" onclick="openEventPopup('./img/lego-making.JPG', 'น้องต่อเลโก้', 'เป็น lego อันแรกที่ซื้อให้ และเป็น mini orchid คือเทอ Appreciation + Thoughtfulness 🥺')">
+        <img src="./img/lego-making.JPG" alt="">
+        <h3>น้องต่อเลโก้</h3>
+        <p>เป็น lego อันแรกที่ซื้อให้ และเป็น mini orchid คือเทอ</p>
+      </div>
+      <div class="moment-card" onclick="openEventPopup('./img/turtle.JPG', 'น้องให้วาดเต่า', 'เป็นรูปที่น้องให้วาด และเค้าก็วาดให้เลยในคาบเรียน น่ารักสุดๆ')">
+        <img src="./img/turtle.JPG" alt="">
+        <h3>น้องให้วาดเต่า</h3>
+        <p>เป็นรูปที่น้องให้วาด และเค้าก็วาดให้เลยในคาบเรียน</p>
+      </div>
+      <div class="moment-card" onclick="openEventPopup('./img/valentine.JPG', 'น้องฉลาม Valentine', 'เป็นรูปที่น้องให้วาด ในวัน valentine เป็นชุดฉลามที่น้องใส่ ถือดอกไม้ 💐')">
+        <img src="./img/valentine.JPG" alt="">
+        <h3>น้องฉลาม</h3>
+        <p>เป็นรูปที่น้องให้วาด ในวัน valentine เป็นชุดฉลามที่น้องใส่ ถือดอกไม้</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="love-section">
+    <h2>❤️ คำถามสำคัญ</h2>
+    <p class="question">น้องเลย์รักเรามั้ย? 🥺</p>
+    <div class="love-buttons">
+      <button id="no-btn" onclick="handleNo()">ไม่</button>
+      <button id="yes-btn" onclick="handleYes()">รัก</button>
+    </div>
+    <p id="love-response" class="response-msg"></p>
+  </section>
+
+  <!-- Popup Golden Dog -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <img src="./img/golden.png" alt="Golden Retriever cartoon" />
+      <p>เค้ารู้อยู่แล้วว่าจะตอบแบบนี้ 😚💚</p>
+      <button onclick="closePopup()">ปิด</button>
+    </div>
+  </div>
+
+  <!-- Popup Moment -->
+  <div id="event-popup" class="popup">
+    <div class="popup-content">
+      <img id="popup-image" src="" alt="เหตุการณ์" />
+      <h3 id="popup-title"></h3>
+      <p id="popup-desc"></p>
+      <button onclick="closeEventPopup()">ปิด</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>สร้างด้วยหัวใจสีเขียว 💚 โดยคนที่เข้าใจแต่ยังไม่พอใจเวลาน้องหาย</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
